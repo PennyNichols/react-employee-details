@@ -6,7 +6,7 @@ import { faArrowLeft,faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 const EmployeeCard = (props) => {
 	const [index, setIndex] = useState(0);
-	let { name, age, email, image, id } = props.data[index];
+	let { name, age, email, image} = props.data[index];
     function prevHandler(){
         setIndex(
             index <= 0 ? props.data.length -1 : index - 1
