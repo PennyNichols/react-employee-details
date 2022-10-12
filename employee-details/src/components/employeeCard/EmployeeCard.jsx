@@ -24,8 +24,8 @@ const EmployeeCard = (props) => {
                 <img className='shadow-sm img-fluid w-50 h-50 mx-auto mt-5' src={image} alt={name} />
                 <Card.Body>
                     <Card.Header className='h2 my-0 bg-white border-0'>{name}</Card.Header>
-                    <Card.Subtitle className='my-2 fw-bolder text-uppercase email'>{email}</Card.Subtitle>
-                    <Card.Subtitle className='mt-4 fw-lighter fs-5'>{age} years old</Card.Subtitle>
+                    <Card.Subtitle className='my-1 fw-bolder text-uppercase email'>{email}</Card.Subtitle>
+                    <Card.Subtitle className='mt-3 fw-lighter fs-5'>{age} years old</Card.Subtitle>
                     
                 </Card.Body>
                 
