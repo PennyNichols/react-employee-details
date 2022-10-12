@@ -11,31 +11,23 @@ const EmployeeCard = (props) => {
     }
     function nextHandler(){
         setIndex(
-            index <= 0 ? props.data.length -1 : index + 1
+            index >= props.data.length -1 ? 0 : index + 1
         );
     }
 	return (
 		<div>
-			<h2 className="employee-num">Employee # {index + 1}</h2>
-            <Card className='container' style={{ width: '18rem' }}>
-                <Card.Img variant="top" src={image} alt={name} />
+			<h2 className="employee-num text-white pb-3">Employee # {index + 1}</h2>
+            <Card className='container bg-white' style={{ width: '32rem' }}>
+                <img className=' img-fluid w-50 h-50 mx-auto mt-5' src={image} alt={name} />
                 <Card.Body>
-                    <Card.Header>{name}</Card.Header>
-                    <Card.Subtitle>{email}</Card.Subtitle>
-                    <Card.Subtitle>{age}</Card.Subtitle>
-                    <Card.Text>
-                        Some quick example text to build on the card title and make up the bulk of
-                        the card's content.
-                    </Card.Text>
+                    <Card.Header className='h2 my-0 bg-white border-0'>{name}</Card.Header>
+                    <Card.Subtitle className='my-2 fw-bolder text-uppercase email'>{email}</Card.Subtitle>
+                    <Card.Subtitle className='my-4 fw-lighter fs-5'>{age} years old</Card.Subtitle>
+                    
                 </Card.Body>
-                <ListGroup flush>
-                    <ListGroupItem>Cras justo odio</ListGroupItem>
-                    <ListGroupItem>Dapibus ac facilisis in</ListGroupItem>
-                    <ListGroupItem>Vestibulum at eros</ListGroupItem>
-                </ListGroup>
+                
                 <Card.Body>
-                    <Card.Link href="#">Card Link</Card.Link>
-                    <Card.Link href="#">Another Link</Card.Link>
+                    
                 </Card.Body>
             </Card>
             <button className='prev' onClick={prevHandler}>previous</button>
