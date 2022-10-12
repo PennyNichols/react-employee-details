@@ -6,7 +6,7 @@ import data from './helpers/data';
 function App() {
   return (
     <div className="App bg-dark">
-      <Header title='Employee Details'/>
+      <Header title='Say Hello To Our Team!'/>
       <EmployeeCard data={data}/>
     </div>
   );
